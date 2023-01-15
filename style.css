@@ -16,9 +16,15 @@ body{
     background-color: var(--main-color);
     overflow-x: hidden;
 }
+p{
+    margin: 5px;
+    padding: 0;
+}
 
 .navbar{
     position: fixed;
+    background-color: rgba(0,0,0,0.3);
+    backdrop-filter: blur(10px);
     /* background-color: var(--main-color); */
     padding: 0 20px;
     display: flex;
@@ -51,7 +57,6 @@ body{
     font-weight: 600;
 }
 
-
 .nav-image img{
     width: 100vw;
     height: auto;;
@@ -80,7 +85,7 @@ body{
     font-size: 1.5em;
     font-weight: 600;
     color: #fff;
-    margin: 20;
+    margin: 0;
 }
 
 
@@ -115,7 +120,18 @@ body{
     padding: 0 2.6rem;
   }
   
+}
 
+@media screen and (max-width: 768px){
+    .hero-button{
+        font-size: 0.6em;
+        top: 180px;
+    }
+    .nav-image img{
+        height: 50vh;
+        object-fit: cover;
+    }
+      
 }
 
 /* --------------------------------------------abiuttttttttttttttt */
@@ -151,24 +167,73 @@ body{
 .about-image-mobile img{
     height: 200px;;
 }
+.navbar-menu-mobile{
+    display: none;
+
+}
+.navbar-menu-mobile-names{
+    display: none;
+    cursor: pointer;
+}
 
 @media screen and (max-width: 768px){
     .about{
         flex-direction: column;
         width: 100%;
-        padding: 20px;;
+        padding: 20px;
     }
     .about-image img{
-        height: 200px;;
+        height: 200px;
     }
     .about-details{
         padding: 20px;
+        bottom: 10px;
     }
     .about-image-mobile{
         display: block;
     }
     .about-image-desktop {
         display: none;
+    }
+    .navbar-menu-mobile{
+        display: block;
+    }
+    .navbar-menu-mobile img{
+        height: 20px;
+    }
+    .navbar-menu-mobile.{
+        display: block;
+    }
+    .navbar{
+        padding: 0;
+        margin: 0;
+        position: fixed;
+    }
+    .navbar-menu-mobile-names{
+        color: #fff;
+        width: 100vw;
+        position: fixed;
+        z-index: 100000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+         backdrop-filter: blur(10px);
+         background-color: rgba(0,0,0,0.3);
+         bottom: -100%;
+         transition: 0.5s;
+         
+    }
+    .navbar-menu-mobile-names.active{
+        bottom: 0;
+    }
+    
+    .navbar-menu-mobile-names a{
+        text-decoration: none;
+        color: #fff;
+    }
+    .navbar-menu-mobile-names a img{
+        height: 30px;
     }
 }
     
@@ -177,32 +242,54 @@ body{
 
 .contact-container{
     color: #fff;
+    background-color: #000a18;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     flex-direction: row;
     width: 100vw;
+    border-bottom: 2px solid var(--secondary-color);
 }
 .contact-emer{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding: 0;
+    margin: 0;
 }
 .contact-form {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-left: 3px solid var(--secondary-color);
-    border-right: 3px solid var(--secondary-color);
+    flex-direction: column;
+    /* border-left: 3px solid var(--secondary-color);
+    border-right: 3px solid var(--secondary-color); */
     height: 300px;
-    width: 33%;
-    margin-bottom: 30px;
 }
 .contact-links{
+    text-decoration: none;
+    color: #fff;
+    
+}
+.contact-links:hover{
+    color: #d6a810;
+}
+.contact-otherlinks{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.footer{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    background-color: #000a18;
+    color: #fff;
+    height: 100px;
 }
 
 @media screen and (max-width: 768px){
@@ -211,10 +298,13 @@ body{
         
     }
     .contact-form{
-        border-top: 3px solid var(--secondary-color);
-        border-bottom: 3px solid var(--secondary-color);
+        /* border-top: 3px solid var(--secondary-color);
+        border-bottom: 3px solid var(--secondary-color); */
         border-left: none;
         border-right: none;
+    }
+    .footer{
+        font-size: 0.6em;;
     }
 }
     
