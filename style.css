@@ -10,7 +10,6 @@ body{
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     color: var(--main-color);
-    background-color: #fff;
     margin: 0;
     padding: 0;
     background-color: var(--main-color);
@@ -28,7 +27,7 @@ p{
     /* background-color: var(--main-color); */
     padding: 0 20px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     width: 100vw;
     height: 80px;
@@ -70,16 +69,21 @@ p{
         font-size: 0.6em;
     }
     .hero-button{
-        top: 10vh;;
-        left: 10vw;
+        top: 50%;;
+        left: 50%;
     }
 }
     
 
 .hero-button{
     position: absolute;
-    bottom: 40vh;
-    left: 10vw;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    top: 50%;
 }
 .hero-button p{
     font-size: 1.5em;
@@ -308,3 +312,78 @@ p{
     }
 }
     
+/*dwwwwwwwwwwwwwwwwwwwwwwwwwwww  student ui wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww*/
+
+.student-bg{
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.navbar-student{
+    position: fixed;
+    background-color: var(--main-color);
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100vw;
+    height: 80px;
+    color: #fff;
+    z-index: 1000;
+}
+
+.student-content{
+    display: flex;
+    position: absolute;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    top: 20%;
+    width: 70vw;
+    height: 60vh;
+    background-color: var(--main-color);
+    margin: 20px;
+    padding: 10px;
+    color: #FFFFFF;
+    border-radius: 30px;
+}
+.student-content h3{
+    font-size: 1.5em;
+    font-weight: 600;
+    margin: 0;
+    padding-bottom: 30px;
+    
+}
+.student-content h5{
+    font-size: 1.5em;
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+}
+.student-hostel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.student-hostel-name{
+    font-weight: 700;
+}
+.student-content-image{
+    height: 100%;
+    width: 50%;
+    border-right: #d6a810 10px solid;
+}
+.student-content-image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.student-conetent-details{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
